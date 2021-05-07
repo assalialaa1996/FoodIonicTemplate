@@ -1,0 +1,77 @@
+<ion-app [dir]="rtlSide">
+	<ion-split-pane  contentId="main-content">
+		<ion-menu *ngIf="rtlSide == 'ltr'" side="start" contentId="main-content" type="overlay">
+			<div class="bg"></div>
+			<ion-header class="bg_transparent">
+				<div class="banner">
+					<div class="logo_box d-flex">
+						<img src="assets/images/logo.png">
+						<h2>{{'app_title' | translate}}</h2>
+					</div>
+					<h3>{{'hey' | translate}} Sam,</h3>
+					<p> +1 987 654 3210</p>
+				</div>
+			</ion-header>
+			<ion-content>
+				<ion-list lines="none">
+					<ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+						<ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+							<div class="item_inner d-flex">
+								<ion-icon class="ion-text-start" slot="start" [class]="p.icon" ></ion-icon>
+								<ion-label>
+									<h2>{{ p.title | translate}}</h2>
+									<p> {{ p.text | translate}}</p>
+								</ion-label>
+							</div>
+						</ion-item>
+					</ion-menu-toggle>
+				</ion-list>
+			</ion-content>
+			<ion-footer *ngIf="config.demoMode" class="f-branding-class">
+				<ion-item [routerDirection]="'root'" class="f-item-class" (click)="developedBy()">
+					<div class="item_inner d-flex">
+						<h6 class="text-white-dev">{{'developed_by' | translate}}</h6>
+						<img class="img-logo" src="assets/images/logo_vt_white.png" alt="">
+					</div>
+				</ion-item>
+			</ion-footer>
+		</ion-menu>
+		<ion-menu *ngIf="rtlSide == 'rtl'" side="end" contentId="main-content" type="overlay">
+			<div class="bg"></div>
+			<ion-header class="bg_transparent">
+				<div class="banner">
+					<div class="logo_box d-flex">
+						<img src="assets/images/logo.png">
+						<h2>{{'app_title' | translate}}</h2>
+					</div>
+					<h3>{{'hey' | translate}} Sam,</h3>
+					<p> +1 987 654 3210</p>
+				</div>
+			</ion-header>
+			<ion-content>
+				<ion-list lines="none">
+					<ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+						<ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+							<div class="item_inner d-flex">
+								<ion-icon class="ion-text-start" slot="start" [class]="p.icon" ></ion-icon>
+								<ion-label>
+									<h2>{{ p.title | translate}}</h2>
+									<p> {{ p.text | translate}}</p>
+								</ion-label>
+							</div>
+						</ion-item>
+					</ion-menu-toggle>
+				</ion-list>
+			</ion-content>
+			<ion-footer *ngIf="config.demoMode" class="f-branding-class">
+				<ion-item [routerDirection]="'root'" class="f-item-class" (click)="developedBy()">
+					<div class="item_inner d-flex">
+						<h6 class="text-white-dev">{{'developed_by' | translate}}</h6>
+						<img class="img-logo" src="assets/images/logo_vt_white.png" alt="">
+					</div>
+				</ion-item>
+			</ion-footer>
+		</ion-menu>
+		<ion-router-outlet main id="main-content"></ion-router-outlet>
+	</ion-split-pane>
+</ion-app>

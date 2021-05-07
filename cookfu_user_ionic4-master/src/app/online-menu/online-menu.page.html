@@ -1,0 +1,54 @@
+<ion-header class="bg_transparent">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button icon="ios-arrow-back"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			<span class="cart_icon end ion-float-end" (click)="cart()">
+				<ion-icon class="zmdi zmdi-shopping-cart ion-text-start"></ion-icon>
+				<ion-badge>1</ion-badge>
+			</span>
+		</ion-title>
+	</ion-toolbar>
+
+	<div class="banner">
+		<div class="banner_img center_img">
+			<img src="assets/images/r1.jpg" class="crop_img">
+		</div>
+		<div class="banner_details">
+			<h2 class="d-flex">
+				<span class="item_name">Paneer Khurchan</span>
+				<span class="end">$ 50</span>
+			</h2>
+			<p>A rich tomato, butter and cream based gravy, lightly spiced. This one is a Punjabi dhaba style recipe. Unlike other cooked vegetable (sabzi) recipes, this one is cooked on a tawa. </p>
+		</div>
+	</div>
+</ion-header>
+
+<ion-content class="bg_color">
+	<div class="specification">
+		<h2 class="d-flex">
+			<span class="item_name">Specification</span>
+		</h2>
+		<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+
+		<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+	</div>
+	<div class="specification">
+		<h2 class="d-flex">
+			<span class="item_name">Specification</span>
+		</h2>
+		<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+
+		<p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+	</div>
+</ion-content>
+
+<ion-footer no-border class="d-flex">
+	<div class="add-remove d-flex">
+		<ion-icon class="zmdi zmdi-minus"></ion-icon>
+		<h2 class="ion-text-center">1</h2>
+		<ion-icon class="zmdi zmdi-plus"></ion-icon>
+	</div>
+	<ion-button size="large" shape="round" class="btn" (click)="cart()">{{'add_to_order' | translate}}</ion-button>
+</ion-footer>

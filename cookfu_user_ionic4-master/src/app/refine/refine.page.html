@@ -1,0 +1,75 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button icon="ios-arrow-back"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			{{'refine' | translate}}
+			<span class="ion-float-end">
+				<ion-icon class="zmdi zmdi-time-restore-setting ion-text-end"></ion-icon>
+			</span>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<ion-list lines="none">
+		<ion-card>
+			<h2>{{'type_of_food' | translate}}</h2>
+			<ion-radio-group>
+				<ion-row>
+					<ion-col size="7">
+						<ion-item>
+							<ion-label>{{'veg_non_veg' | translate}}</ion-label>
+							<ion-radio slot="start" value="veg_non_veg" checked></ion-radio>
+						</ion-item>
+					</ion-col>
+					<ion-col size="5">
+						<ion-item>
+							<ion-label>{{'veg_only' | translate}}</ion-label>
+							<ion-radio slot="start" value="veg_only"></ion-radio>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+			</ion-radio-group>
+		</ion-card>
+
+		<ion-card>
+			<h2>{{'price_sort_by' | translate}}</h2>
+			<ion-radio-group>
+				<ion-row>
+					<ion-col size="7">
+						<ion-item>
+							<ion-label>{{'high_to_low' | translate}}</ion-label>
+							<ion-radio slot="start" value="high_to_low"></ion-radio>
+						</ion-item>
+					</ion-col>
+					<ion-col size="5">
+						<ion-item>
+							<ion-label>{{'low_to_high' | translate}}</ion-label>
+							<ion-radio slot="start" value="low_to_high" checked></ion-radio>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+			</ion-radio-group>
+		</ion-card>
+
+		<ion-card class="price_range">
+			<h2>{{'price_range' | translate}}</h2>
+			<ion-row>
+				<ion-col size="12">
+					<ion-item>
+						<ion-range dualKnobs="boolean" min="1" max="100" pin mode="md">
+							<ion-label slot="start" class="ion-text-start">{{'min' | translate}}</ion-label>
+							<ion-label slot="end" class="ion-text-end  ion-padding-end">{{'max' | translate}}</ion-label>
+						</ion-range>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+		</ion-card>
+	</ion-list>
+</ion-content>
+
+<ion-footer no-border>
+	<ion-button size="large" class="btn">{{'apply_filters' | translate}}</ion-button>
+</ion-footer>

@@ -1,0 +1,7 @@
+{
+  "name": "cookfu_user4",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

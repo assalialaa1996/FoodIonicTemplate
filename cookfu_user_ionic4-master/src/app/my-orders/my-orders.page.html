@@ -1,0 +1,602 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title> {{'my_orders' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<ion-list lines="none">
+		<ion-item [ngClass]="faqExpand1 ? 'active' : '' ">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<h2 class="ion-text-end" (click)="faqExpandToggle1()"><strong>14</strong>May</h2>
+					<div class="item_detail">
+						<h3 class="d-flex" (click)="faqExpandToggle1()">
+							<span class="item_name">Global China Restaurant</span>
+							<span class="item_price end ion-text-end">$ 126</span>
+						</h3>
+						<p class="d-flex">
+							<span class="order_code" (click)="faqExpandToggle1()">{{'order' | translate}} #CXG214 |
+								12:30 pm</span>
+							<span class="end order_status preparing ion-text-end">{{'preparing' | translate}}</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="order_details">
+					<div class="order_steps d-flex">
+						<div class="order_step ion-text-center active">
+							<p>{{'placed' | translate}}</p>
+							<ion-icon class="zmdi zmdi-check-all"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'preparing' | translate}}</p>
+							<ion-icon class="zmdi zmdi-cutlery"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'dispatched' | translate}}</p>
+							<ion-icon class="zmdi zmdi-bike"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'track' | translate}}</p>
+							<ion-icon class="zmdi zmdi-truck"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center ">
+							<p>{{'delivered' | translate}}</p>
+							<ion-icon class="zmdi zmdi-home"></ion-icon>
+						</div>
+					</div>
+
+					<div class="order_items">
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Ginger Chicken Curry</span>
+								<span class="end item_price ion-text-end">$ 35</span>
+							</h3>
+							<p>1 x $ 35</p>
+						</div>
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Panner Khurchan (2)</span>
+								<span class="end item_price ion-text-end">$ 80</span>
+							</h3>
+							<p>2 x $ 40</p>
+						</div>
+
+						<div class="total">
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'sub_total' | translate}}</span>
+								<strong class="ion-text-end end">$ 115</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'tax' | translate}} (4%)</span>
+								<strong class="ion-text-end end">$ 1</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'delivery_charge' | translate}}</span>
+								<strong class="ion-text-end end">$ 10</strong>
+							</h4>
+						</div>
+						<div class="grand_total">
+							<h2 class="d-flex">
+								<span class="payment_option">{{'paid_with' | translate}} Debit card</span>
+								<span class="end ion-text-end">$ 1225</span>
+							</h2>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</ion-item>
+
+
+		<ion-item [ngClass]="faqExpand2 ? 'active' : '' ">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<h2 class="ion-text-end" (click)="faqExpandToggle2()"><strong>10</strong>May</h2>
+					<div class="item_detail">
+						<h3 class="d-flex" (click)="faqExpandToggle2()">
+							<span class="item_name">Global China Restaurant</span>
+							<span class="item_price end ion-text-end">$ 126</span>
+						</h3>
+						<p class="d-flex">
+							<span class="order_code" (click)="faqExpandToggle2()">{{'order' | translate}} #CXG214 |
+								12:30 pm</span>
+							<span class="end order_status review ion-text-center"
+								(click)="rate_restro()">{{'review' | translate}}</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="order_details">
+					<div class="order_steps d-flex">
+						<div class="order_step ion-text-center active">
+							<p>{{'placed' | translate}}</p>
+							<ion-icon class="zmdi zmdi-check-all"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'preparing' | translate}}</p>
+							<ion-icon class="zmdi zmdi-cutlery"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'dispatched' | translate}}</p>
+							<ion-icon class="zmdi zmdi-bike"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'track' | translate}}</p>
+							<ion-icon class="zmdi zmdi-truck"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'delivered' | translate}}</p>
+							<ion-icon class="zmdi zmdi-home"></ion-icon>
+						</div>
+					</div>
+
+					<div class="order_items">
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Ginger Chicken Curry</span>
+								<span class="end item_price ion-text-end">$ 35</span>
+							</h3>
+							<p>1 x $ 35</p>
+						</div>
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Panner Khurchan (2)</span>
+								<span class="end item_price ion-text-end">$ 80</span>
+							</h3>
+							<p>2 x $ 40</p>
+						</div>
+
+						<div class="total">
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'sub_total' | translate}}</span>
+								<strong class="ion-text-end end">$ 115</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'tax' | translate}} (4%)</span>
+								<strong class="ion-text-end end">$ 1</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'delivery_charge' | translate}}</span>
+								<strong class="ion-text-end end">$ 10</strong>
+							</h4>
+						</div>
+						<div class="grand_total">
+							<h2 class="d-flex">
+								<span class="payment_option">{{'paid_with' | translate}} Debit card</span>
+								<span class="end ion-text-end">$ 1225</span>
+							</h2>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item [ngClass]="faqExpand3 ? 'active' : '' ">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<h2 class="ion-text-end" (click)="faqExpandToggle3()"><strong>08</strong>Apr</h2>
+					<div class="item_detail">
+						<h3 class="d-flex" (click)="faqExpandToggle3()">
+							<span class="item_name">Global China Restaurant</span>
+							<span class="item_price end ion-text-end">$ 126</span>
+						</h3>
+						<p class="d-flex">
+							<span class="order_code" (click)="faqExpandToggle3()">{{'order' | translate}} #CXG214 |
+								12:30 pm</span>
+							<span class="end order_status review ion-text-center"
+								(click)="rate_restro()">{{'review' | translate}}</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="order_details">
+					<div class="order_steps d-flex">
+						<div class="order_step ion-text-center active">
+							<p>{{'placed' | translate}}</p>
+							<ion-icon class="zmdi zmdi-check-all"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'preparing' | translate}}</p>
+							<ion-icon class="zmdi zmdi-cutlery"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'dispatched' | translate}}</p>
+							<ion-icon class="zmdi zmdi-bike"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'track' | translate}}</p>
+							<ion-icon class="zmdi zmdi-truck"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'delivered' | translate}}</p>
+							<ion-icon class="zmdi zmdi-home"></ion-icon>
+						</div>
+					</div>
+
+					<div class="order_items">
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Ginger Chicken Curry</span>
+								<span class="end item_price ion-text-end">$ 35</span>
+							</h3>
+							<p>1 x $ 35</p>
+						</div>
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Panner Khurchan (2)</span>
+								<span class="end item_price ion-text-end">$ 80</span>
+							</h3>
+							<p>2 x $ 40</p>
+						</div>
+
+						<div class="total">
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'sub_total' | translate}}</span>
+								<strong class="ion-text-end end">$ 115</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'tax' | translate}} (4%)</span>
+								<strong class="ion-text-end end">$ 1</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'delivery_charge' | translate}}</span>
+								<strong class="ion-text-end end">$ 10</strong>
+							</h4>
+						</div>
+						<div class="grand_total">
+							<h2 class="d-flex">
+								<span class="payment_option">{{'paid_with' | translate}} Debit card</span>
+								<span class="end ion-text-end">$ 1225</span>
+							</h2>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</ion-item>
+
+
+		<ion-item [ngClass]="faqExpand4 ? 'active' : '' ">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<h2 class="ion-text-end" (click)="faqExpandToggle4()"><strong>05</strong>Apr</h2>
+					<div class="item_detail">
+						<h3 class="d-flex" (click)="faqExpandToggle4()">
+							<span class="item_name">Global China Restaurant</span>
+							<span class="item_price end ion-text-end">$ 126</span>
+						</h3>
+						<p class="d-flex">
+							<span class="order_code" (click)="faqExpandToggle4()">{{'order' | translate}} #CXG214 |
+								12:30 pm</span>
+							<span class="end order_status review ion-text-center"
+								(click)="rate_restro()">{{'review' | translate}}</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="order_details">
+					<div class="order_steps d-flex">
+						<div class="order_step ion-text-center active">
+							<p>{{'placed' | translate}}</p>
+							<ion-icon class="zmdi zmdi-check-all"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'preparing' | translate}}</p>
+							<ion-icon class="zmdi zmdi-cutlery"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'dispatched' | translate}}</p>
+							<ion-icon class="zmdi zmdi-bike"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'track' | translate}}</p>
+							<ion-icon class="zmdi zmdi-truck"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'delivered' | translate}}</p>
+							<ion-icon class="zmdi zmdi-home"></ion-icon>
+						</div>
+					</div>
+
+					<div class="order_items">
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Ginger Chicken Curry</span>
+								<span class="end item_price ion-text-end">$ 35</span>
+							</h3>
+							<p>1 x $ 35</p>
+						</div>
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Panner Khurchan (2)</span>
+								<span class="end item_price ion-text-end">$ 80</span>
+							</h3>
+							<p>2 x $ 40</p>
+						</div>
+
+						<div class="total">
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'sub_total' | translate}}</span>
+								<strong class="ion-text-end end">$ 115</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'tax' | translate}} (4%)</span>
+								<strong class="ion-text-end end">$ 1</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'delivery_charge' | translate}}</span>
+								<strong class="ion-text-end end">$ 10</strong>
+							</h4>
+						</div>
+						<div class="grand_total">
+							<h2 class="d-flex">
+								<span class="payment_option">{{'paid_with' | translate}} Debit card</span>
+								<span class="end ion-text-end">$ 1225</span>
+							</h2>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item [ngClass]="faqExpand5 ? 'active' : '' ">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<h2 class="ion-text-end" (click)="faqExpandToggle5()"><strong>01</strong>Apr</h2>
+					<div class="item_detail">
+						<h3 class="d-flex" (click)="faqExpandToggle5()">
+							<span class="item_name">Global China Restaurant</span>
+							<span class="item_price end ion-text-end">$ 126</span>
+						</h3>
+						<p class="d-flex">
+							<span class="order_code" (click)="faqExpandToggle5()">{{'order' | translate}} #CXG214 |
+								12:30 pm</span>
+							<span class="end order_status review ion-text-center"
+								(click)="rate_restro()">{{'review' | translate}}</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="order_details">
+					<div class="order_steps d-flex">
+						<div class="order_step ion-text-center active">
+							<p>{{'placed' | translate}}</p>
+							<ion-icon class="zmdi zmdi-check-all"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'preparing' | translate}}</p>
+							<ion-icon class="zmdi zmdi-cutlery"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'dispatched' | translate}}</p>
+							<ion-icon class="zmdi zmdi-bike"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'track' | translate}}</p>
+							<ion-icon class="zmdi zmdi-truck"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'delivered' | translate}}</p>
+							<ion-icon class="zmdi zmdi-home"></ion-icon>
+						</div>
+					</div>
+
+					<div class="order_items">
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Ginger Chicken Curry</span>
+								<span class="end item_price ion-text-end">$ 35</span>
+							</h3>
+							<p>1 x $ 35</p>
+						</div>
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Panner Khurchan (2)</span>
+								<span class="end item_price ion-text-end">$ 80</span>
+							</h3>
+							<p>2 x $ 40</p>
+						</div>
+
+						<div class="total">
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'sub_total' | translate}}</span>
+								<strong class="ion-text-end end">$ 115</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'tax' | translate}} (4%)</span>
+								<strong class="ion-text-end end">$ 1</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'delivery_charge' | translate}}</span>
+								<strong class="ion-text-end end">$ 10</strong>
+							</h4>
+						</div>
+						<div class="grand_total">
+							<h2 class="d-flex">
+								<span class="payment_option">{{'paid_with' | translate}} Debit card</span>
+								<span class="end ion-text-end">$ 1225</span>
+							</h2>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item [ngClass]="faqExpand6 ? 'active' : '' ">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<h2 class="ion-text-end" (click)="faqExpandToggle6()"><strong>26</strong>Mar</h2>
+					<div class="item_detail">
+						<h3 class="d-flex" (click)="faqExpandToggle6()">
+							<span class="item_name">Global China Restaurant</span>
+							<span class="item_price end ion-text-end">$ 126</span>
+						</h3>
+						<p class="d-flex">
+							<span class="order_code" (click)="faqExpandToggle6()">{{'order' | translate}} #CXG214 |
+								12:30 pm</span>
+							<span class="end order_status review ion-text-center"
+								(click)="rate_restro()">{{'review' | translate}}</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="order_details">
+					<div class="order_steps d-flex">
+						<div class="order_step ion-text-center active">
+							<p>{{'placed' | translate}}</p>
+							<ion-icon class="zmdi zmdi-check-all"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'preparing' | translate}}</p>
+							<ion-icon class="zmdi zmdi-cutlery"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'dispatched' | translate}}</p>
+							<ion-icon class="zmdi zmdi-bike"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'track' | translate}}</p>
+							<ion-icon class="zmdi zmdi-truck"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'delivered' | translate}}</p>
+							<ion-icon class="zmdi zmdi-home"></ion-icon>
+						</div>
+					</div>
+
+					<div class="order_items">
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Ginger Chicken Curry</span>
+								<span class="end item_price ion-text-end">$ 35</span>
+							</h3>
+							<p>1 x $ 35</p>
+						</div>
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Panner Khurchan (2)</span>
+								<span class="end item_price ion-text-end">$ 80</span>
+							</h3>
+							<p>2 x $ 40</p>
+						</div>
+
+						<div class="total">
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'sub_total' | translate}}</span>
+								<strong class="ion-text-end end">$ 115</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'tax' | translate}} (4%)</span>
+								<strong class="ion-text-end end">$ 1</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'delivery_charge' | translate}}</span>
+								<strong class="ion-text-end end">$ 10</strong>
+							</h4>
+						</div>
+						<div class="grand_total">
+							<h2 class="d-flex">
+								<span class="payment_option">{{'paid_with' | translate}} Debit card</span>
+								<span class="end ion-text-end">$ 1225</span>
+							</h2>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item [ngClass]="faqExpand7 ? 'active' : '' ">
+			<div class="item_inner">
+				<div class="item_header d-flex">
+					<h2 class="ion-text-end" (click)="faqExpandToggle7()"><strong>20</strong>Mar</h2>
+					<div class="item_detail">
+						<h3 class="d-flex" (click)="faqExpandToggle7()">
+							<span class="item_name">Global China Restaurant</span>
+							<span class="item_price end ion-text-end">$ 126</span>
+						</h3>
+						<p class="d-flex">
+							<span class="order_code" (click)="faqExpandToggle7()">{{'order' | translate}} #CXG214 |
+								12:30 pm</span>
+							<span class="end order_status review ion-text-center"
+								(click)="rate_restro()">{{'review' | translate}}</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="order_details">
+					<div class="order_steps d-flex">
+						<div class="order_step ion-text-center active">
+							<p>{{'placed' | translate}}</p>
+							<ion-icon class="zmdi zmdi-check-all"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'preparing' | translate}}</p>
+							<ion-icon class="zmdi zmdi-cutlery"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'dispatched' | translate}}</p>
+							<ion-icon class="zmdi zmdi-bike"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'track' | translate}}</p>
+							<ion-icon class="zmdi zmdi-truck"></ion-icon>
+						</div>
+						<div class="order_step ion-text-center active">
+							<p>{{'delivered' | translate}}</p>
+							<ion-icon class="zmdi zmdi-home"></ion-icon>
+						</div>
+					</div>
+
+					<div class="order_items">
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Ginger Chicken Curry</span>
+								<span class="end item_price ion-text-end">$ 35</span>
+							</h3>
+							<p>1 x $ 35</p>
+						</div>
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Panner Khurchan (2)</span>
+								<span class="end item_price ion-text-end">$ 80</span>
+							</h3>
+							<p>2 x $ 40</p>
+						</div>
+
+						<div class="total">
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'sub_total' | translate}}</span>
+								<strong class="ion-text-end end">$ 115</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'tax' | translate}} (4%)</span>
+								<strong class="ion-text-end end">$ 1</strong>
+							</h4>
+							<h4 class="d-flex">
+								<span class="ion-text-end">{{'delivery_charge' | translate}}</span>
+								<strong class="ion-text-end end">$ 10</strong>
+							</h4>
+						</div>
+						<div class="grand_total">
+							<h2 class="d-flex">
+								<span class="payment_option">{{'paid_with' | translate}} Debit card</span>
+								<span class="end ion-text-end">$ 1225</span>
+							</h2>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</ion-item>
+
+	</ion-list>
+</ion-content>

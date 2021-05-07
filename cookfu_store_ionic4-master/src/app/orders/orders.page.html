@@ -1,0 +1,565 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			{{"orders" | translate}}
+		</ion-title>
+	</ion-toolbar>
+	<ion-segment [(ngModel)]="tab" lines="none">
+		<ion-segment-button value="new_orders">
+			<ion-label>
+				{{'new_orders' | translate}}
+			</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="past_orders">
+			<ion-label>
+				{{'past_orders' | translate}}
+			</ion-label>
+		</ion-segment-button>
+	</ion-segment>
+</ion-header>
+
+<ion-content class="bg_color">
+	<div class="tab_container" [ngSwitch]="tab">
+		<ion-list lines="none" *ngSwitchCase="'new_orders'">
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Aricson Smith</span>
+						<span class="order_price ion-text-center">$ 114</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex view_order">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status new_order end ion-text-end">
+							<strong>{{"view_order" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Kelly Johnson</span>
+						<span class="order_price ion-text-center">$ 88</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Credit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Linda Williams</span>
+						<span class="order_price ion-text-center">$ 95</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Dolly Patel</span>
+						<span class="order_price ion-text-center">$ 35</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Debit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+				<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Kelly Johnson</span>
+						<span class="order_price ion-text-center">$ 88</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Credit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Linda Williams</span>
+						<span class="order_price ion-text-center">$ 95</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Dolly Patel</span>
+						<span class="order_price ion-text-center">$ 35</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Debit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+				<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Kelly Johnson</span>
+						<span class="order_price ion-text-center">$ 88</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Credit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Linda Williams</span>
+						<span class="order_price ion-text-center">$ 95</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Dolly Patel</span>
+						<span class="order_price ion-text-center">$ 35</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Debit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+				<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Kelly Johnson</span>
+						<span class="order_price ion-text-center">$ 88</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Credit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Linda Williams</span>
+						<span class="order_price ion-text-center">$ 95</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Dolly Patel</span>
+						<span class="order_price ion-text-center">$ 35</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Debit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"accepted" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+		</ion-list>
+
+
+
+		<ion-list lines="none" *ngSwitchCase="'past_orders'">
+
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Linda Williams</span>
+						<span class="order_price ion-text-center">$ 95</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status delivered end ion-text-end">
+							<strong>{{"delivered" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Dolly Patel</span>
+						<span class="order_price ion-text-center">$ 35</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Debit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status delivered end ion-text-end">
+							<strong>{{"delivered" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Kelly Johnson</span>
+						<span class="order_price ion-text-center">$ 88</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Credit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"delivered" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Aricson Smith</span>
+						<span class="order_price ion-text-center">$ 114</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex view_order">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status cancelled end ion-text-end">
+							<strong>{{"cancelled" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Linda Williams</span>
+						<span class="order_price ion-text-center">$ 95</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status delivered end ion-text-end">
+							<strong>{{"delivered" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Dolly Patel</span>
+						<span class="order_price ion-text-center">$ 35</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Debit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status delivered end ion-text-end">
+							<strong>{{"delivered" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Kelly Johnson</span>
+						<span class="order_price ion-text-center">$ 88</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Credit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"delivered" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Aricson Smith</span>
+						<span class="order_price ion-text-center">$ 114</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex view_order">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status cancelled end ion-text-end">
+							<strong>{{"cancelled" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Linda Williams</span>
+						<span class="order_price ion-text-center">$ 95</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status delivered end ion-text-end">
+							<strong>{{"delivered" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Dolly Patel</span>
+						<span class="order_price ion-text-center">$ 35</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Debit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status delivered end ion-text-end">
+							<strong>{{"delivered" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Kelly Johnson</span>
+						<span class="order_price ion-text-center">$ 88</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Credit Card
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status accepted end ion-text-end">
+							<strong>{{"delivered" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+			<ion-item (click)="order_info()">
+				<div class="item_inner">
+					<h2 class="d-flex">
+						<span class="name">Aricson Smith</span>
+						<span class="order_price ion-text-center">$ 114</span>
+						<span class="end payment_by ion-text-end">
+							<small>{{'payment_by' | translate}}</small>
+							Cash
+						</span>
+					</h2>
+
+					<h5>{{"order" | translate}} #042</h5>
+					<h6 class="d-flex view_order">
+						{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+						<span class="order_status cancelled end ion-text-end">
+							<strong>{{"cancelled" | translate}}</strong>
+							<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+						</span>
+					</h6>
+				</div>
+			</ion-item>
+
+		</ion-list>
+	</div>
+</ion-content>
+<div *ngIf="config.demoMode" class="buy-this-app-class">
+	<ion-button class="button-size" shape="round" (click)="buyThisApp()">
+		<ion-icon name="md-cart" class="text-white"></ion-icon> &nbsp;
+		{{'buy_this_app' | translate}}
+	</ion-button>
+</div>

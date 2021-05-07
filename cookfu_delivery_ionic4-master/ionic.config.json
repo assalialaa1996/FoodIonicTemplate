@@ -1,0 +1,7 @@
+{
+  "name": "cookfu_delivery4",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

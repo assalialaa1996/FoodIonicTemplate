@@ -1,0 +1,42 @@
+ <ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button icon="ios-arrow-back"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'bank_details' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="form">
+		<h2>{{'your_bank_detail' | translate}}</h2>
+		<p>{{'bank_details_text' | translate}}</p>
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<ion-label position="floating">{{'account_holder_name' | translate}}</ion-label>
+				<ion-input type="name" value="Sam Smith"></ion-input>
+			</ion-item>
+
+			<ion-item lines="none">
+				<ion-label position="floating">{{'bank_name' | translate}}</ion-label>
+				<ion-input type="text" value="HSBC Code"></ion-input>
+			</ion-item>
+
+			<ion-item lines="none">
+				<ion-label position="floating">{{'branch_code' | translate}}</ion-label>
+				<ion-input type="text" value="HSBC0215436"></ion-input>
+			</ion-item>
+
+			<ion-item lines="none">
+				<ion-label position="floating">{{'account_number' | translate}}</ion-label>
+				<ion-input type="text" value="1127 2254 6587 2410"></ion-input>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>
+
+<ion-footer no-border>
+	<div class="botton_container">
+		<ion-button size="large" shape="round" class="btn">{{'update_info' | translate}}</ion-button>
+	</div>
+</ion-footer>

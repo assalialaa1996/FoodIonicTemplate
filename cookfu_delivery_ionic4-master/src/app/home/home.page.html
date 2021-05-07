@@ -1,0 +1,73 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			<div class="title_box d-flex">
+				<h2>{{'home' | translate}}</h2>
+				<div class="toggle_box end" [ngClass]="fabAction ? 'active' : ''">
+					<h3 class="online">{{'online' | translate}}</h3>
+					<h3 class="offline">{{'offline' | translate}}</h3>
+					<ion-toggle (click)="toggleFab()"></ion-toggle>
+				</div>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+	<div class="map" [ngClass]="fabAction ? 'active' : ''">
+		<img src="assets/images/map.png">
+		<ion-icon class="zmdi zmdi-home ion-text-center" style="top: 20%; left: 20%;"></ion-icon>
+		<ion-icon class="zmdi zmdi-cutlery ion-text-center" style="top: 48%; left: 25%;"></ion-icon>
+		<div class="my_location" style="top:29%; left: 7%"></div>
+	</div>
+</ion-content>
+<ion-footer no-border [ngClass]="fabAction ? 'active' : ''">
+	<div class="order_box">
+		<div class="order_header">
+			<ion-row>
+				<ion-col size="4">
+					<h2 class="ion-text-center">
+						<ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+						10 min
+					</h2>
+				</ion-col>
+
+				<ion-col size="4">
+					<h2 class="ion-text-center">
+						<ion-icon class="zmdi zmdi-navigation ion-text-start"></ion-icon>
+						08.00 km
+					</h2>
+				</ion-col>
+
+				<ion-col size="4">
+					<h3 class="ion-text-center">
+						{{'navigate' | translate}}
+					</h3>
+				</ion-col>
+			</ion-row>
+		</div>
+
+		<div class="order_detail">
+			<h3>Global China Restaurant</h3>
+			<h4>{{'order' | translate}} #042 | 10 June, 2018, 11:40 am</h4>
+		</div>
+		<div class="order_address d-flex">
+			<div class="text ">
+				<h2 class="d-flex">
+					<ion-icon class="zmdi zmdi-cutlery ion-text-center"></ion-icon>
+					<span>1025, Umm Amar Road, USA</span>
+				</h2>
+
+				<h2 class="d-flex">
+					<ion-icon class="zmdi zmdi-home ion-text-center"></ion-icon>
+					<span>22 GN States, Old Golden Road, USA</span>
+				</h2>
+			</div>
+			<ion-icon class="zmdi zmdi-phone ion-text-center end" (click)="call()"></ion-icon>
+		</div>
+	</div>
+
+	<h6 class="offline">{{'you_are_offline' | translate}}</h6>
+	<h6 class="start_delibery">{{'start_delibery' | translate}}</h6>
+	<!--	<h6 class="mark_as_delivered">{{'mark_as_delivered' | translate}}</h6>-->
+</ion-footer>

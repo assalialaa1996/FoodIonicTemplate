@@ -1,0 +1,34 @@
+ion-card {
+	background: var(--white);
+	margin: 0;
+	width: 100%;
+	border-radius: 0;
+	margin-top: 10px;
+	padding: 20px 20px 22px 20px;
+	box-shadow: 0 3px 1px -5px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, -5.86), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+	h2 {
+		color: #474747;
+		font-size: 1rem;
+		margin: 0;
+		font-weight: 600;
+		padding-bottom: 10px;
+	}
+
+	.form {
+		width: calc(100% - 34px);
+
+		ion-list {
+			padding: 0;
+
+			ion-item {
+				padding-bottom: 5px !important;
+				margin-bottom: 5px;
+
+				ion-input {
+					font-size: 1rem !important;
+				}
+			}
+		}
+	}
+}

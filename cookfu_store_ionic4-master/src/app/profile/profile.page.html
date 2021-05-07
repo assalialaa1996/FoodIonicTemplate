@@ -1,0 +1,112 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button icon="ios-arrow-back"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'profile' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+	<div class="item_img center_img">
+		<!--		<img src="assets/images/red_thai_curry.png" class="crop_img">-->
+		<div class="text ion-text-center">
+			<ion-icon class="zmdi zmdi-camera"></ion-icon>
+			<h2>{{"upload_item_image" | translate}}</h2>
+		</div>
+	</div>
+
+	<ion-list no-lines>
+		<ion-card>
+			<h2>{{"restaurant_details" | translate}}</h2>
+			<div class="form">
+				<ion-item lines="none">
+					<ion-label position="floating">{{'restaurant_identity' | translate}}</ion-label>
+					<ion-input type="name" value="Global China Restaurant"></ion-input>
+				</ion-item>
+
+				<ion-item lines="none">
+					<ion-label position="floating">{{'sewwt_tagline' | translate}}</ion-label>
+					<ion-input type="text" value="Arebic Healthy Food"></ion-input>
+				</ion-item>
+				<ion-item lines="none">
+					<ion-label position="floating">{{'email_address' | translate}}</ion-label>
+					<ion-input type="email" value="globalchina@mail.com"></ion-input>
+				</ion-item>
+				<ion-item lines="none">
+					<ion-label position="floating">{{'phone_number' | translate}}</ion-label>
+					<ion-input type="text" value="+1 987 654 3210"></ion-input>
+				</ion-item>
+			</div>
+		</ion-card>
+
+		<ion-card>
+			<h2>{{"opening_hours" | translate}}</h2>
+			<div class="form">
+				<ion-item lines="none">
+					<ion-label position="floating">{{'opening_time' | translate}}</ion-label>
+					<ion-datetime displayFormat="HH:mm.ss" value="08:00:00"></ion-datetime>
+				</ion-item>
+
+				<ion-item lines="none">
+					<ion-label position="floating">{{'closing_time' | translate}}</ion-label>
+					<ion-datetime displayFormat="HH:mm.ss" value="08:00:00"></ion-datetime>
+				</ion-item>
+			</div>
+		</ion-card>
+
+		<ion-card>
+			<h2>{{"delivery" | translate}}</h2>
+			<div class="form">
+				<ion-item lines="none">
+					<ion-label position="floating">{{'delivery_time' | translate}}</ion-label>
+					<ion-input type="text" value="35"></ion-input>
+				</ion-item>
+				<ion-item lines="none">
+					<ion-label position="floating">{{'delivery_fee' | translate}}</ion-label>
+					<ion-input type="text" value="$ 40"></ion-input>
+				</ion-item>
+				<ion-item lines="none">
+					<ion-label position="floating">{{'minimum_order' | translate}}</ion-label>
+					<ion-input type="text" value="$ 100"></ion-input>
+				</ion-item>
+			</div>
+		</ion-card>
+
+		<ion-card>
+			<div class="form">
+				<ion-item lines="none" class="item_toggle">
+					<ion-label>{{'pre_order' | translate}}</ion-label>
+					<ion-toggle></ion-toggle>
+				</ion-item>
+				<ion-item lines="none" class="item_toggle">
+					<ion-label>{{'veg_only' | translate}}</ion-label>
+					<ion-toggle checked></ion-toggle>
+				</ion-item>
+			</div>
+		</ion-card>
+
+		<ion-card>
+			<h2>{{"restaurant_address" | translate}}</h2>
+			<h3 class="d-flex"><span class="address">{{"enter_address" | translate}}</span>
+				<ion-icon class="zmdi zmdi-pin end ion-text-center"></ion-icon>
+			</h3>
+		</ion-card>
+		
+		<ion-card>
+			<h2>{{"other_restaurant_detail" | translate}}</h2>
+			<div class="form">
+				<ion-item lines="none">
+					<ion-label position="floating">{{'enter_details_here' | translate}}</ion-label>
+					<ion-input type="text" value=""></ion-input>
+				</ion-item>
+			</div>
+		</ion-card>
+	</ion-list>
+</ion-content>
+
+<ion-footer no-border>
+	<div class="botton_container">
+		<ion-button size="large" shape="round" class="btn">{{'update_profile' | translate}}</ion-button>
+	</div>
+</ion-footer>

@@ -1,0 +1,30 @@
+ion-tabs {
+	ion-tab-bar {
+		--background: var(--white) !important;
+		box-shadow: 0 11px 9px 10px rgba(0, 0, 0, 0.1);
+
+		ion-tab-button {
+			color: var(--text-dark2);
+			border-bottom: 2.5px solid;
+			border-color: var(--transparent);
+			transition: all .5s;
+
+			ion-icon {
+				font-size: 1.1rem;
+				margin-bottom: 4px;
+			}
+
+			ion-label {
+				font-size: .8rem;
+				letter-spacing: 0;
+			}
+
+			&.tab-selected {
+				color: var(--secondary);
+				border-color: var(--secondary);
+				background: var(--bg-color);
+				transition: all .5s;
+			}
+		}
+	}
+}

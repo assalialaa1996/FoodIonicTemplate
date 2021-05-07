@@ -1,0 +1,99 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button icon="ios-arrow-back"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'your_cart' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<ion-list lines="none">
+		<ion-item>
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/images/food2.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h3 class="d-flex">
+						<span class="item_name">Dal Makhni</span>
+						<span class="end ion-text-end">$ 30</span>
+					</h3>
+					<h4 class="d-flex">
+						<span class="add-remove d-flex">
+							<ion-icon class="zmdi zmdi-minus"></ion-icon>
+							<strong class="ion-text-center">1</strong>
+							<ion-icon class="zmdi zmdi-plus"></ion-icon>
+						</span>
+						<small>x&nbsp; $ 30</small>
+						<ion-icon class="zmdi zmdi-delete end ion-text-end"></ion-icon>
+					</h4>
+
+				</div>
+			</div>
+		</ion-item>
+
+		<ion-item>
+			<div class="item_inner d-flex">
+				<div class="img_box center_img">
+					<img src="assets/images/food3.png" class="crop_img">
+				</div>
+				<div class="text_box">
+					<h3 class="d-flex">
+						<span class="item_name">Panner Khurchan</span>
+						<span class="end ion-text-end">$ 80</span>
+					</h3>
+					<h4 class="d-flex">
+						<span class="add-remove d-flex">
+							<ion-icon class="zmdi zmdi-minus"></ion-icon>
+							<strong class="ion-text-center">2</strong>
+							<ion-icon class="zmdi zmdi-plus"></ion-icon>
+						</span>
+						<small>x&nbsp; $ 40</small>
+						<ion-icon class="zmdi zmdi-delete end ion-text-end"></ion-icon>
+					</h4>
+
+				</div>
+			</div>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer no-border>
+	<div class="form">
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<ion-icon slot="start" class="zmdi zmdi-assignment ion-text-start"></ion-icon>
+				<ion-input type="text" placeholder="{{'add_instuctions' | translate}}"></ion-input>
+			</ion-item>
+		</ion-list>
+	</div>
+
+	<ion-card>
+		<h2 class="ion-text-center" (click)="coupon_code()">{{'have_coupon_code' | translate}}</h2>
+		<div class="payment_details">
+			<h3 class="d-flex">{{'sub_total' | translate}}<span class="end">$ 115.00</span></h3>
+			<h4 class="d-flex">{{'tax' | translate}} (4%)<span class="end">$ 1.00</span></h4>
+			<h4 class="d-flex">{{'delivery_charge' | translate}}<span class="end">$ 10.00</span></h4>
+		</div>
+	</ion-card>
+	<div class="amount_payable" (click)="shipping()">
+		<ion-row>
+			<ion-col size="6" class="d-flex">
+				<div class="cart_icon">
+					<ion-icon class="zmdi zmdi-shopping-cart ion-text-start"></ion-icon>
+					<ion-badge>2</ion-badge>
+				</div>
+				<h2 class="ion-text-end">{{'checkout_now' | translate}}</h2>
+			</ion-col>
+
+			<ion-col size="6">
+				<h3 class="ion-text-end">
+					{{'pay' | translate}}
+					<strong>$ 126 </strong>
+					<ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>
+				</h3>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-footer>

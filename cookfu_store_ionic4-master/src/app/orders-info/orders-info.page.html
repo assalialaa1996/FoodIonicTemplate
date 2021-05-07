@@ -1,0 +1,103 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button icon="ios-arrow-back"></ion-back-button>
+		</ion-buttons>
+		<ion-title> {{"orders_info" | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<ion-list lines="none">
+		<ion-item>
+			<div class="item_inner">
+				<h2 class="d-flex">
+					<span class="name">{{"order" | translate}} #CKF221</span>
+					<span class="order_price ion-text-center">$ 114</span>
+					<span class="end payment_by ion-text-end">
+						<small>{{'payment_by' | translate}}</small>
+						Cash
+					</span>
+				</h2>
+
+				<h5>{{"by" | translate}} Aricson Smith</h5>
+				<h6 class="d-flex view_order">
+					{{"ordered_on" | translate}} 11:45 am 01 Jan, 2018
+				</h6>
+			</div>
+		</ion-item>
+
+		<ion-item>
+			<div class="item_inner">
+				<div class="order_details">
+					<h2>{{"order_details" | translate}}</h2>
+					<div class="order_items">
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Ginger Chicken Curry</span>
+								<span class="end item_price ion-text-end">$ 29</span>
+							</h3>
+							<p>1 x $ 29</p>
+						</div>
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Panner Khurchan </span>
+								<span class="end item_price ion-text-end">$ 50</span>
+							</h3>
+							<p>2 x $ 25</p>
+						</div>
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">Ginger Chicken Curry</span>
+								<span class="end item_price ion-text-end">$ 15</span>
+							</h3>
+							<p>1 x $ 15</p>
+						</div>
+						<div class="item">
+							<h3 class="d-flex">
+								<span class="item_name">French Fries </span>
+								<span class="end item_price ion-text-end">$ 20</span>
+							</h3>
+							<p>2 x $ 10</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</ion-item>
+	</ion-list>
+</ion-content>
+
+<ion-footer no-border>
+	<div class="btn_container">
+		<ion-row>
+			<ion-col>
+				<ion-button size="large" fill="outline"  class="btn">{{'cencel_order' | translate}}</ion-button>
+			</ion-col>	
+			<ion-col>
+				<ion-button size="large"   class="btn" (click)="order_status()">{{'accept_order' | translate}}</ion-button>
+			</ion-col>
+		</ion-row>
+	</div>
+	
+	<div class="container">
+		<ion-row>
+			<ion-col size="6" class="ion-text-start">
+				<h2>Aricson Smith</h2>
+				<h3>{{'customer' | translate}}</h3>
+				<h4>
+					<ion-icon class="ion-text-start zmdi zmdi-phone"></ion-icon>
+					+1 987 654 3210
+				</h4>
+			</ion-col>	
+			
+			<ion-col size="6" class="ion-text-end">
+				<h2>{{'not_assigned_yet' | translate}}</h2>
+				<h3>{{'deliveryman' | translate}}</h3>
+				<h4>
+					<ion-icon class="ion-text-start zmdi zmdi-phone"></ion-icon>
+					 XXX XXX XXXX 
+				</h4>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-footer>

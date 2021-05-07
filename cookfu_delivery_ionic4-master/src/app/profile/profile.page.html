@@ -1,0 +1,32 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button icon="ios-arrow-back"></ion-back-button>
+		</ion-buttons>
+		<ion-title> {{'profile' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<ion-card>
+		<h2>{{'personal_details' | translate}}</h2>
+		<div class="form">
+			<ion-list lines="none">
+				<ion-item lines="none">
+					<ion-label position="floating">{{'full_name' | translate}}</ion-label>
+					<ion-input type="name" value="Sam Smith"></ion-input>
+				</ion-item>
+
+				<ion-item lines="none">
+					<ion-label position="floating">{{'email_address' | translate}}</ion-label>
+					<ion-input type="email" value="samamith@mail.com"></ion-input>
+				</ion-item>
+
+				<ion-item lines="none">
+					<ion-label position="floating">{{'phone_number' | translate}}</ion-label>
+					<ion-input type="text" value="+91 987 654 3210"></ion-input>
+				</ion-item>
+			</ion-list>
+		</div>
+	</ion-card>
+</ion-content>

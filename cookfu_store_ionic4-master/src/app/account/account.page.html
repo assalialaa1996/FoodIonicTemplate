@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{'account' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list lines="none">
+	<ion-item (click)="profile()">
+		<div class="item_inner d-flex">
+			<ion-icon class="zmdi zmdi-account ion-text-start"></ion-icon>
+			<h2>{{'profile' | translate}}</h2>
+		</div>
+	</ion-item>
+	<ion-item (click)="review()">
+		<div class="item_inner d-flex">
+			<ion-icon class="zmdi zmdi-thumb-up ion-text-start"></ion-icon>
+			<h2>{{'review' | translate}}</h2>
+		</div>
+	</ion-item>
+	<ion-item (click)="bank_details()">
+		<div class="item_inner d-flex">
+			<ion-icon class="zmdi zmdi-balance ion-text-start"></ion-icon>
+			<h2>{{'bank_details' | translate}}</h2>
+		</div>
+	</ion-item>
+	<ion-item (click)="earnings()">
+		<div class="item_inner d-flex">
+			<ion-icon class="zmdi zmdi-balance-wallet ion-text-start"></ion-icon>
+			<h2>{{'earnings' | translate}}</h2>
+		</div>
+	</ion-item>
+	<ion-item (click)="contact_us()">
+		<div class="item_inner d-flex">
+			<ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+			<h2>{{'support' | translate}}</h2>
+		</div>
+	</ion-item>
+	<ion-item (click)="changeLanguage()">
+		<div class="item_inner d-flex">
+			<ion-icon class="zmdi zmdi-settings"></ion-icon>
+			<h2>{{'change_language' | translate}}</h2>
+		</div>
+	</ion-item>
+	<ion-item (click)="sign_in()">
+		<div class="item_inner d-flex">
+			<ion-icon class="zmdi zmdi-square-right ion-text-start"></ion-icon>
+			<h2>{{'logout' | translate}}</h2>
+		</div>
+	</ion-item>
+	</ion-list>
+</ion-content>
+<ion-footer *ngIf="config.demoMode" class="f-branding-class">
+	<ion-item [routerDirection]="'root'" class="f-item-class" (click)="developedBy()">
+		<div class="item_inner d-flex" style="justify-content: center;padding-bottom: 5px;">
+			<h6 class="text-white-dev">{{'developed_by' | translate}}</h6>
+			<img class="img-logo" src="assets/images/VT_black_logo.png" alt="">
+		</div>
+	</ion-item>
+</ion-footer>
+ 

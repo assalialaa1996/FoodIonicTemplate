@@ -1,0 +1,91 @@
+<ion-header class="bg_transparent">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button icon="ios-arrow-back"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{"item_info" | translate}}
+			<ion-icon class="zmdi zmdi-camera ion-float-end"></ion-icon>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+	<div class="item_img center_img">
+		<img src="assets/images/red_thai_curry.png" class="crop_img">
+		<!--
+		<div class="text ion-text-center">
+			<ion-icon class="zmdi zmdi-camera"></ion-icon>
+			<h2>{{"upload_item_image" | translate}}</h2>
+		</div>
+-->
+	</div>
+	<div class="form">
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<ion-label position="floating">{{'item_name' | translate}}</ion-label>
+				<ion-input type="name" value="Chicken Grilled"></ion-input>
+			</ion-item>
+
+			<ion-radio-group>
+				<ion-row class="radio_group">
+					<ion-col size="6">
+						<ion-item>
+							<ion-label>{{'veg_food' | translate}}</ion-label>
+							<ion-radio slot="start" value="veg_food"></ion-radio>
+						</ion-item>
+					</ion-col>
+					<ion-col size="6">
+						<ion-item>
+							<ion-label>{{'non_veg_food' | translate}}</ion-label>
+							<ion-radio slot="start" checked  value="non_veg_food"></ion-radio>
+						</ion-item>
+					</ion-col>
+				</ion-row>
+			</ion-radio-group>
+			<ion-item>
+				<ion-label position="floating">{{'choose_item_category' | translate}}</ion-label>
+				<ion-select  interface="action-sheet">
+					<ion-select-option value="1">Indian food</ion-select-option>
+					<ion-select-option value="2" selected>Italian food</ion-select-option>
+					<ion-select-option value="3">Chinese food </ion-select-option>
+					<ion-select-option value="4">Continental food </ion-select-option>
+					<ion-select-option value="5">South Indian food </ion-select-option>
+				</ion-select>
+			</ion-item> 
+
+			<ion-item lines="none">
+				<ion-label position="floating">{{'short_description' | translate}}</ion-label>
+				<ion-textarea style="padding-top: 10px" rows="3" type="text" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, "></ion-textarea>
+			</ion-item>
+
+			<ion-row class="toggle_row">
+				<ion-col size="6">
+					<ion-item lines="none">
+						<ion-label position="floating">{{'price' | translate}}</ion-label>
+						<ion-input type="text" value="$ 29"></ion-input>
+					</ion-item>
+				</ion-col>
+				<ion-col size="6">
+					<ion-item lines="none" class="item_toggle">
+						<div class="item_inner d-flex">
+							<div class="end">
+								<h4>{{'available' | translate}}?</h4>
+								<ion-toggle checked></ion-toggle>
+							</div>
+						</div>
+					</ion-item>
+				</ion-col>
+			</ion-row>
+			<ion-item lines="none">
+				<ion-label position="floating">{{'specification' | translate}}</ion-label>
+					<ion-textarea style="padding-top: 10px" rows="3" type="text" value="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."></ion-textarea>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>
+
+<ion-footer no-border>
+	<div class="botton_container">
+		<ion-button size="large" shape="round" class="btn">{{'update_info' | translate}}</ion-button>
+	</div>
+</ion-footer>

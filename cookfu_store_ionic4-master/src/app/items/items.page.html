@@ -1,0 +1,509 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>
+			{{"items" | translate}}
+		</ion-title>
+	</ion-toolbar>
+	<ion-segment [(ngModel)]="tab" lines="none">
+		<ion-segment-button value="approved_items">
+			<ion-label>
+				{{'approved_items' | translate}}
+			</ion-label>
+		</ion-segment-button>
+		<ion-segment-button value="pending_items">
+			<ion-label>
+				{{'pending_items' | translate}}
+			</ion-label>
+		</ion-segment-button>
+	</ion-segment>
+</ion-header>
+<ion-content class="bg_color" fullscreen>
+	<div class="tab_container" [ngSwitch]="tab">
+		<div class="items_row" *ngSwitchCase="'approved_items'">
+			<ion-row>
+				<ion-col size="6">
+					<div class="item">
+						<div class="item_img center_img"  (click)="item_detail()">
+							<img src="assets/images/red_thai_curry.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2  (click)="item_detail()">Red Chcken Tikka</h2>
+							<h3  (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 29</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle checked></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6">
+					<div class="item">
+						<div class="item_img center_img"  (click)="item_detail()">
+							<img src="assets/images/pizza.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2  (click)="item_detail()">Non Veg Supreme</h2>
+							<h3  (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 35</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle checked></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+
+				<ion-col size="6" >
+					<div class="item">
+						<div class="item_img center_img" (click)="item_detail()">
+							<img src="assets/images/Boneless-Chicken-wings.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2 (click)="item_detail()">Boneless Chicken Wings Peri-Peri</h2>
+							<h3 (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 100</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" >
+					<div class="item">
+						<div class="item_img center_img" (click)="item_detail()">
+							<img src="assets/images/Roasted-chicken.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2 (click)="item_detail()">Roasted Chicken Peri-Peri</h2>
+							<h3 (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 55</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle checked></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+					<ion-col size="6">
+					<div class="item">
+						<div class="item_img center_img"  (click)="item_detail()">
+							<img src="assets/images/red_thai_curry.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2  (click)="item_detail()">Red Chcken Tikka</h2>
+							<h3  (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 29</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle checked></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6">
+					<div class="item">
+						<div class="item_img center_img"  (click)="item_detail()">
+							<img src="assets/images/pizza.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2  (click)="item_detail()">Non Veg Supreme</h2>
+							<h3  (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 35</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle checked></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+
+				<ion-col size="6" >
+					<div class="item">
+						<div class="item_img center_img" (click)="item_detail()">
+							<img src="assets/images/Boneless-Chicken-wings.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2 (click)="item_detail()">Boneless Chicken Wings Peri-Peri</h2>
+							<h3 (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 100</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" >
+					<div class="item">
+						<div class="item_img center_img" (click)="item_detail()">
+							<img src="assets/images/Roasted-chicken.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2 (click)="item_detail()">Roasted Chicken Peri-Peri</h2>
+							<h3 (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 55</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle checked></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+					<ion-col size="6">
+					<div class="item">
+						<div class="item_img center_img"  (click)="item_detail()">
+							<img src="assets/images/red_thai_curry.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2  (click)="item_detail()">Red Chcken Tikka</h2>
+							<h3  (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 29</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle checked></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6">
+					<div class="item">
+						<div class="item_img center_img"  (click)="item_detail()">
+							<img src="assets/images/pizza.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2  (click)="item_detail()">Non Veg Supreme</h2>
+							<h3  (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 35</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle checked></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+
+				<ion-col size="6" >
+					<div class="item">
+						<div class="item_img center_img" (click)="item_detail()">
+							<img src="assets/images/Boneless-Chicken-wings.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2 (click)="item_detail()">Boneless Chicken Wings Peri-Peri</h2>
+							<h3 (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 100</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" >
+					<div class="item">
+						<div class="item_img center_img" (click)="item_detail()">
+							<img src="assets/images/Roasted-chicken.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2 (click)="item_detail()">Roasted Chicken Peri-Peri</h2>
+							<h3 (click)="item_detail()">Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 55</h4>
+
+								<div class="item_status end">
+									<h5>{{'available' | translate}}?</h5>
+									<ion-toggle checked></ion-toggle>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+			</ion-row>
+		</div>
+
+
+		<div class="items_row" *ngSwitchCase="'pending_items'">
+			<ion-row>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/Boneless-Chicken-wings.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Boneless Chicken Wings Peri-Peri</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 100</h4>
+
+								<div class="item_status end">
+									<h5>{{'pending' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/red_thai_curry.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Red Chcken Tikka</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 29</h4>
+
+								<div class="item_status end">
+									<h5>{{'pending' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/Roasted-chicken.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Roasted Chicken Peri-Peri</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 55</h4>
+
+								<div class="item_status end">
+									<h5 class="rejected">{{'rejected' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/pizza.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Non Veg Supreme</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 35</h4>
+								<div class="item_status end">
+									<h5 class="rejected">{{'rejected' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/Boneless-Chicken-wings.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Boneless Chicken Wings Peri-Peri</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 100</h4>
+
+								<div class="item_status end">
+									<h5>{{'pending' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/red_thai_curry.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Red Chcken Tikka</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 29</h4>
+
+								<div class="item_status end">
+									<h5>{{'pending' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/Roasted-chicken.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Roasted Chicken Peri-Peri</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 55</h4>
+
+								<div class="item_status end">
+									<h5 class="rejected">{{'rejected' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/pizza.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Non Veg Supreme</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 35</h4>
+								<div class="item_status end">
+									<h5 class="rejected">{{'rejected' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/Boneless-Chicken-wings.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Boneless Chicken Wings Peri-Peri</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 100</h4>
+
+								<div class="item_status end">
+									<h5>{{'pending' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/red_thai_curry.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Red Chcken Tikka</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 29</h4>
+
+								<div class="item_status end">
+									<h5>{{'pending' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/Roasted-chicken.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Roasted Chicken Peri-Peri</h2>
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 55</h4>
+
+								<div class="item_status end">
+									<h5 class="rejected">{{'rejected' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+				<ion-col size="6" (click)="item_detail()">
+					<div class="item">
+						<div class="item_img center_img">
+							<img src="assets/images/pizza.png" class="crop_img">
+						</div>
+						<div class="item_detail">
+							<h2>Non Veg Supreme</h2> 
+							<h3>Non-Veg Food</h3>
+
+							<div class="d-flex item_bottom_side">
+								<h4>$ 35</h4>
+								<div class="item_status end">
+									<h5 class="rejected">{{'rejected' | translate}}</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</ion-col>
+			</ion-row>
+		</div>
+	</div>
+</ion-content>
+
+<ion-footer no-border>
+	<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="add_item()">
+		<ion-fab-button>
+			<ion-icon class="zmdi zmdi-plus"></ion-icon>
+		</ion-fab-button>
+	</ion-fab>
+</ion-footer>
